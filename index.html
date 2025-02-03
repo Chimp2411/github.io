@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .blog-post {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .blog-post h2 {
+            margin: 0;
+        }
+        .blog-post p {
+            color: #555;
+        }
+        .read-more {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .hidden-image {
+            display: none;
+            margin-top: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function toggleImage(id) {
+            var img = document.getElementById(id);
+            if (img.style.display === "none" || img.style.display === "") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Haber Sitesi</h1>
+    </header>
+    <div class="container">
+        <div class="blog-post">
+            <h2>Divan pastanesini mermileyenlerle takılan liseli genç!!!</h2>
+            <p>Kayseri Talasta bir anadolu lisesinde okuyan K.D'nin arkadaşı tarafından anlatılana göre divan pastanesi bir ara kurşunlanmıştı ve K.D o pastaneyi kurşunlayan ailenin çocuğuyla sevgili olmuştu. K.D'nin dediğine göre çocuğun o aileyle bir alakası yoktu. Sadece amcası böyle işler yapıyordu. Evleri MIX AVM'nin yakınındaymış. Hatta bir keresinde bu aileden birine ter bakan bir çocuğu zorla götürüp sevmedikleri birini öldürtmüşler olayın sonunda da o çocuk cinayetten müebbet cezası yedi!! ve bir keresinde K.D'nin babası *.D kızım benim lafımı dinlemiyor diye bir keresinde evi terketmiş!!!</p>
+            <a onclick="toggleImage('image1')" class="read-more">Devamını Oku</a>
+            <img id="image1" class="hidden-image" src="https://chgtrk.ru/nimg/2021/03/23/064817A6-D798-41AE-A522-16EE78FC3571.jpg" alt="İlgili Görsel">
+        </div>
+        <div class="blog-post">
+            <h2>Okulda bıçaklı kavga!!!</h2>
+            <p>Kayseri'de bir lisede meydana gelen olayda 11. sınıf öğrencisi B.E.D.(16), sınav esnasında sınıfa bıçakla giren başka bir öğrenci tarafından bacağından yaralandı.Olay Talas İlçesi’nde bulunan bir lisede meydana geldi. İddiaya göre aynı okulda başka sınıflarda okuyan 3 öğrenci arasında kız meselesi nedeniyle husumet çıktı. Aralarında husumet bulunan öğrencilerden biri evinden bıçak getirdi.  Okula bıçakla gelen öğrenci A.K.Ç aralarında husumet bulunan öğrencilerden olmayan 11’inci sınıf öğrencisi B.E.D.’i bacağından dört kez bıçakladı. Yaralanan öğrenci ambulans ile Erciyes Üniversitesi Tıp Fakültesi Acil Bölümü’ne kaldırıldı.  Yaralı öğrencinin velisi olay nedeniyle şikayetci oldu.</p>
+            <a onclick="toggleImage('image2')" class="read-more">Devamını Oku</a>
+            <img id="image2" class="hidden-image" src="https://i.kayserigundem.com.tr/c/80/740x417/s/dosya/haber/sinav-ortasinda-dehset-lise-og_1736257127_xQNls4.jpg" alt="İlgili Görsel">
+        </div>
+        <div class="blog-post">
+            <h2></h2>
+    </div>
+</body>
+</html>
