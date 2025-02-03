@@ -5,133 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haber Sitesi</title>
     <style>
-        /* Genel Sayfa Stili */
+        /* Genel sayfa stili */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: white;
             text-align: center;
         }
 
-        /* Başlık Bölümü */
+        /* Konteyner */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        /* Başlık */
         header {
-            background: #007BFF;
-            color: #fff;
-            padding: 25px;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .container {
-            width: 85%;
-            margin: auto;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        /* Haber Kartları */
+        /* Haber kutuları */
         .blog-post {
-            background: #fff;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
             margin: 20px 0;
-            border-radius: 12px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            text-align: left;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out;
         }
 
+        .blog-post:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Başlık */
         .blog-post h2 {
             margin: 0;
-            color: #333;
+            font-size: 22px;
+            color: #ffcc00;
         }
 
+        /* İçerik yazısı */
         .blog-post p {
-            color: #666;
+            color: #ddd;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* Devamını Oku Butonu */
+        /* "Devamını Oku" butonu */
         .read-more {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 15px;
             padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
+            background: #ff9800;
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 6px;
-            transition: background 0.3s ease-in-out;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .read-more:hover {
-            background-color: #0056b3;
-        }
-
-        /* Resimleri Gizle & Göster */
-        .hidden-image {
-            display: none;
-            margin-top: 15px;
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Responsive Tasarım */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-
-            .blog-post {
-                padding: 20px;
-            }
-
-            .read-more {
-                width: 100%;
-                text-align: center;
-            }
+            background: #e68900;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
-    <script>
-        function toggleImage(id) {
-            var img = document.getElementById(id);
-            if (img.style.display === "none" || img.style.display === "") {
-                img.style.display = "block";
-            } else {
-                img.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
-        Anlık Haberler
+        <h1>📢 Anlık Haberler</h1>
     </header>
-
     <div class="container">
         <div class="blog-post">
-            <h2>Divan pastanesini mermileyenlerle takılan liseli genç!!!</h2>
-            <p>Kayseri Talas'ta bir Anadolu lisesinde okuyan K.D'nin arkadaşı tarafından anlatılana göre Divan Pastanesi bir ara kurşunlanmıştı...</p>
-            <a onclick="toggleImage('image1')" class="read-more">Devamını Oku</a>
-            <img id="image1" class="hidden-image" src="https://chgtrk.ru/nimg/2021/03/23/064817A6-D798-41AE-A522-16EE78FC3571.jpg" alt="İlgili Görsel">
+            <h2>Divan Pastanesi Olayı!!!</h2>
+            <p>Kayseri Talasta bir Anadolu lisesinde yaşanan olaylar...</p>
+            <a href="haber1.html" class="read-more">Devamını Oku</a>
         </div>
-
         <div class="blog-post">
-            <h2>Okulda bıçaklı kavga!!!</h2>
-            <p>Kayseri'de bir lisede meydana gelen olayda 11. sınıf öğrencisi B.E.D.(16), sınav esnasında sınıfa bıçakla giren başka bir öğrenci tarafından bacağından yaralandı...</p>
-            <a onclick="toggleImage('image2')" class="read-more">Devamını Oku</a>
-            <img id="image2" class="hidden-image" src="https://i.kayserigundem.com.tr/c/80/740x417/s/dosya/haber/sinav-ortasinda-dehset-lise-og_1736257127_xQNls4.jpg" alt="İlgili Görsel">
+            <h2>Okulda Bıçaklı Kavga!!!</h2>
+            <p>Kayseri'de bir lisede meydana gelen bıçaklı saldırı...</p>
+            <a href="haber2.html" class="read-more">Devamını Oku</a>
         </div>
-
         <div class="blog-post">
             <h2>Öğretmene Hakaret!!!</h2>
-            <p>2023 yılında 9/I sınıfının sınıf öğretmenliğini alan S.E'nin yaşadığı korkunç anlar! Anlatılana göre 9/I öğrencileri...</p>
-            <a onclick="toggleImage('image3')" class="read-more">Devamını Oku</a>
-            <img id="image3" class="hidden-image" src="https://www.sorubak.com/images/teog/918.jpg" alt="İlgili Görsel">
+            <p>Bir öğretmenin sosyal medyada yaşadığı olaylar...</p>
+            <a href="haber3.html" class="read-more">Devamını Oku</a>
         </div>
     </div>
 </body>
